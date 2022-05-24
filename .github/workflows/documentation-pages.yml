@@ -72,7 +72,7 @@ name: documentation_workflow
 # Execute this workflow automatically when an update is pushed to the sphinx-documentation branch
 on:
   push:
-    branches: [ sphinx-documentation ]
+    branches: [ master ]
 
 jobs:
 
