@@ -1,0 +1,124 @@
+#name: documentation_workflow
+#
+## Execute this workflow automatically when an update is pushed to the sphinx-documentation branch
+#on:
+#  push:
+#    branches: [ sphinx-documentation ]
+#
+#jobs:
+#
+#  build_documentation_job: # this is the name of the job
+#    runs-on: ubuntu-latest
+#    env:
+#      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+#
+#    steps:
+#      - name: Checkout # check out the GitHub repository into your virtual machine
+#        # Here the repo is pulled into the virtual machine
+#        uses: actions/checkout@v2.3.4
+#
+#      #- name: Set up Python # Installing python on virtual machine
+#      #  uses: action/setup-python@v3
+#      #  with:
+#      #    python-version: 3.9
+#
+#      - name: Install dependencies # Installing dependencies on virtual machine (maybe also install requirements)
+#        run: | # pipeline symbol, so that you can describe the tasks in multiple lines
+#          python -m pip install -U sphinx
+#          python -m pip install numpydoc
+#          python -m pip install sphinx-rtd-theme
+#
+#      - name: Make the Sphinx documentation # Possibly, add more sphinx-apidoc lines for all folder with code in them
+#        # maybe I can remove sphinx-apidoc -o sphinx\source src\apps, because the __init__.py arrange this
+#        run: |
+#          sphinx-apidoc -o sphinx\source src
+#          cd sphinx
+#          make -C build clean
+#          make -C build html
+#
+#      - name: Save Sphinx documentation in docs folder # Copy sphinx/build/html to the docs folder
+#        # evt, we again start in the root, so sphinx\source
+#        run: |
+#          copy source .\..\docs
+#          cd ..
+#          cd docs
+#          type nul > .nojekyll
+#
+#      - name: Deploy documentation
+#        uses: JamesIves/github-pages-deploy-action@v4.3.3
+#        with:
+#          branch: sphinx-documentation
+#          folder: docs
+
+#
+#name: Documentation on push
+#
+#on:
+#  push:
+#    branches: [ sphinx-documentation ]
+#
+#jobs:
+#  documentation-workflow:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v1
+#      - uses: ammaraskar/sphinx-action@master
+#        with:
+#          docs-folder: "docs/"
+
+
+name: documentation_workflow
+
+# Execute this workflow automatically when an update is pushed to the sphinx-documentation branch
+on:
+  push:
+    branches: [ sphinx-documentation ]
+
+jobs:
+
+  build_documentation_job: # this is the name of the job
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+
+    steps:
+      - name: Checkout # check out the GitHub repository into your virtual machine
+        # Here the repo is pulled into the virtual machine
+        uses: actions/checkout@v2.3.4
+
+#      - name: Set up Python # Installing python on virtual machine
+#        uses: action/setup-python@v2.2.1
+#        with:
+#          python-version: 3.9
+
+      - name: Install dependencies # Installing dependencies on virtual machine (maybe also install requirements)
+        run: | # pipeline symbol, so that you can describe the tasks in multiple lines
+          python -m pip install -U sphinx
+          python -m pip install numpydoc
+          python -m pip install sphinx-rtd-theme
+          python -m pip install sphinx-autoapi
+
+      - name: Make the Sphinx documentation # Possibly, add more sphinx-apidoc lines for all folder with code in them
+        # maybe I can remove sphinx-apidoc -o sphinx\source src\apps, because the __init__.py arrange this
+        run: |
+          make -C docs clean
+          make -C docs html
+
+      - name: Save Sphinx documentation in docs folder # Copy sphinx/build/html to the docs folder
+        # evt, we again start in the root, so sphinx\source
+        run: |
+          cd docs/build/html/
+          git init
+          touch .nojekyll
+          git add -A
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m 'deploy'
+
+      - name: Force push to destination branch
+        uses: ad-m/github-push-action@v0.5.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          force: true
+          directory: ./docs/build/html

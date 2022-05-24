@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+}
+
+[type="radio"]:not(:checked), [type="radio"]:checked {
+    position: absolute;
+    opacity: 1;
+    pointer-events: auto;
+    padding-right: 2px;
+}
+
+.dash-select-cell{
+    padding-right: 10px!important;
+    padding-bottom: 10px!important;
+}
+
+.custom-tab--selected {
+    color: white!important;
+    /* box-shadow: 1px 1px 0px white!important; */
+    border-left: 1px solid white !important;
+    border-right: 1px solid white !important;
+    border-top: 3px solid white !important;
+}
+
+
+
