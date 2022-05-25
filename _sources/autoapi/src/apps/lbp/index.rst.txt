@@ -1,0 +1,38 @@
+:py:mod:`src.apps.lbp`
+======================
+
+.. py:module:: src.apps.lbp
+
+.. autoapi-nested-parse::
+
+   
+   ..
+       !! processed by numpydoc !!
+
+
+Module Contents
+---------------
+
+.. py:data:: layout
+   
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+

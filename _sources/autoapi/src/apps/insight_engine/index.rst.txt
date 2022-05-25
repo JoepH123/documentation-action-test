@@ -1,0 +1,38 @@
+:py:mod:`src.apps.insight_engine`
+=================================
+
+.. py:module:: src.apps.insight_engine
+
+.. autoapi-nested-parse::
+
+   
+   ..
+       !! processed by numpydoc !!
+
+
+Module Contents
+---------------
+
+.. py:data:: layout
+   
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+

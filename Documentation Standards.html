@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documentation Standards &mdash; KNVB Game Analyzer (KGA) 0.2.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Documentation with Sphinx" href="Documentation%20with%20Sphinx.html" />
+    <link rel="prev" title="How to Document?" href="How%20to%20Document.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> KNVB Game Analyzer (KGA)
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Getting%20Started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="How%20to%20Document.html">How to Document?</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Documentation Standards</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#decisions-on-software-and-formatting">Decisions on software and formatting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rules-and-principles-for-documentation-in-kga">Rules and Principles for Documentation in KGA</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#commenting">Commenting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#docstrings">Docstrings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Documentation%20with%20Sphinx.html">Documentation with Sphinx</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Code%20description.html">Code description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autoapi/index.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">KNVB Game Analyzer (KGA)</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="How%20to%20Document.html">How to Document?</a> &raquo;</li>
+      <li>Documentation Standards</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Documentation Standards.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="documentation-standards">
+<h1>Documentation Standards<a class="headerlink" href="#documentation-standards" title="Permalink to this headline"></a></h1>
+<section id="decisions-on-software-and-formatting">
+<h2>Decisions on software and formatting<a class="headerlink" href="#decisions-on-software-and-formatting" title="Permalink to this headline"></a></h2>
+<p>As has been discussed, Sphinx is the tool that is used for the creation of the documentation of the KGA project. It uses the documentation extracted from docstrings in python files together with other hand-written documentation files to form a complete and well-structured documentation page, which can be viewed in the browser. For the composition of docstrings, we use numpydoc. This is the documentation format which is used for the development of the NumPy project. It is a easily interpretable and well organized documentation format, which can be viewed in more detail on their website (<a class="reference external" href="https://numpydoc.readthedocs.io/en/latest/install.html">numpydoc</a>). For the hand-written documentation files, which are used to create more in-depth and topic specific documentation, reStructuredText (RST) is used. This is a markup language that can be used to write beautiful documentations with many customizing options. This (.rst) file type and the language allow you to add in pictures, videos, code blocks, hyperlinks etc. to the documentation. For some examples, you can visit <a class="reference external" href="https://docutils.sourceforge.io/docs/user/rst/quickref.html#external-hyperlink-targets">reStructuredText</a>, <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html">sphinx-RST</a> and <a class="reference external" href="https://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html">sphinx-RST-syntax-guide</a> or you can google more specific questions.</p>
+</section>
+<section id="rules-and-principles-for-documentation-in-kga">
+<h2>Rules and Principles for Documentation in KGA<a class="headerlink" href="#rules-and-principles-for-documentation-in-kga" title="Permalink to this headline"></a></h2>
+<p>First of all, documentation consists of comments and docstrings. Both comments and docstrings have a maximum line length of
+72 characters.</p>
+<section id="commenting">
+<h3>Commenting<a class="headerlink" href="#commenting" title="Permalink to this headline"></a></h3>
+<p><strong>Purposes of comments:</strong></p>
+<ul class="simple">
+<li><p>Planning and reviewing. Outlining the structure of the code and what has to be done. These comments are removed as soon as it has been completed.</p></li>
+<li><p>Code description. Elaboration on some of the code that is unclear.</p></li>
+<li><p>Algorithmic description. Roughly describing the workings of an algorithm or mentioning what algorithm was used for some task.</p></li>
+<li><p>Tagging. TODO, BUG, FIXME, etc..</p></li>
+</ul>
+<p><strong>Rules for comments:</strong></p>
+<ul class="simple">
+<li><p>Comments close to the corresponding code.</p></li>
+<li><p>No redundant info. Assume basic understanding of programming principles and language syntax.</p></li>
+<li><p>Make the code self-explanatory. Easy-to-understand, clear principles and naming should be appropriate.</p></li>
+</ul>
+<p><em>Type hinting</em> can be useful to make the code itself more interpretable:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">hello_name</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+</pre></div>
+</div>
+</section>
+<section id="docstrings">
+<h3>Docstrings<a class="headerlink" href="#docstrings" title="Permalink to this headline"></a></h3>
+<p><strong>Basics</strong></p>
+<p>These are built-in strings that, when configured correctly, can help your users and yourself with your project’s documentation.</p>
+<p>Their purpose is to provide your users with a brief overview of the object. They should be kept concise enough to be easy to maintain but still be elaborate enough for new users to understand their purpose and how to use the documented object.</p>
+<p>Along with docstrings, Python also has the built-in function help() that prints out the objects docstring to the console:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">say_hello</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <span class="s2">&quot;A simple function that says hello... Richie style&quot;</span>
+<span class="n">help</span><span class="p">(</span><span class="n">say_hello</span><span class="p">)</span>
+<span class="n">say_hello</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+   <span class="n">A</span> <span class="n">simple</span> <span class="n">function</span> <span class="n">that</span> <span class="n">says</span> <span class="n">hello</span><span class="o">...</span> <span class="n">Richie</span> <span class="n">style</span>
+</pre></div>
+</div>
+<p>So you can set a docstring using ‘function_name.__doc__ = …’. This does not work for altering the docstrings of existing objects like the string object.</p>
+<p>You can also define a docstring by using triple quotation marks:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">say_hello</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+ <span class="sd">&quot;&quot;&quot;A simple function that says hello... Richie style&quot;&quot;&quot;</span>
+ <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Hello {name}, is it me you&#39;re looking for?&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Docstring types</strong></p>
+<ul class="simple">
+<li><p>At a bare minimum, a docstring should be a quick summary of whatever is it you’re describing and should be contained within a single line (not really used in the KGA project)</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;This is a quick summary line used as a description of the object.&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Multi-lined docstrings are used to further elaborate on the object beyond the summary. All multi-lined docstrings should include:</dt><dd><ul>
+<li><p>A one-line summary</p></li>
+<li><p>A blank line proceeding the summary</p></li>
+<li><p>Any further elaboration for the docstring (parameters, returns, etc. see <a class="reference external" href="https://numpydoc.readthedocs.io/en/latest/install.html">numpydoc</a> documentation)</p></li>
+<li><p>Another blank line</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;This is the summary line</span>
+
+<span class="sd"> This is the further elaboration of the docstring. Within this section,</span>
+<span class="sd"> you can elaborate further on details as appropriate for the situation.</span>
+<span class="sd"> Notice that the summary and the elaboration is separated by a blank new</span>
+<span class="sd"> line.</span>
+<span class="sd"> &quot;&quot;&quot;</span>
+
+ <span class="c1"># Continuation of code</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the KGA project, multi-lined docstrings are the norm and single-lined docstrings should not be used.</p>
+</div>
+<p><strong>What should docstrings (at least) include</strong></p>
+<p><em>Class Docstrings: Classes and Class Methods</em></p>
+<p>Class Docstrings are created for the class itself, as well as any class methods. The docstrings are placed immediately following the class or class method indented by one level:</p>
+<ol class="arabic simple">
+<li><p>Class docstrings should contain the following information:</p>
+<ul class="simple">
+<li><p>A brief summary of its purpose and behavior</p></li>
+<li><p>Any public methods, along with a brief description</p></li>
+<li><p>Any class properties (attributes)</p></li>
+<li><p>Anything related to the interface for subclassers, if the class is intended to be subclassed</p></li>
+</ul>
+</li>
+<li><p>The class constructor parameters should be documented within the __init__ class method docstring.</p></li>
+<li><p>Individual methods should be documented using their individual docstrings. Class method docstrings should contain the following:</p>
+<ul class="simple">
+<li><p>A brief description of what the method is and what it’s used for</p></li>
+<li><p>Any arguments (both required and optional) that are passed including keyword arguments</p></li>
+<li><p>Any returns of the class method</p></li>
+<li><p>Label any arguments that are considered optional or have a default value</p></li>
+<li><p>Any side effects that occur when executing the method</p></li>
+<li><p>Any exceptions that are raised</p></li>
+<li><p>Any restrictions on when the method can be called</p></li>
+</ul>
+</li>
+</ol>
+<p><em>Package and Module Docstrings: Package, modules, and functions</em></p>
+<p>A package is basically a python project, the different python files are the modules and in a module many functions can
+be defined. A python project with different python files always has an __init__.py file.</p>
+<ol class="arabic simple">
+<li><p>Package docstrings</p>
+<ul class="simple">
+<li><p>Placed at the top of the package’s __init__.py file. This docstring should list the modules and sub-packages that are exported by the package.</p></li>
+</ul>
+</li>
+<li><p>Module docstrings: Similar to class docstrings. Instead of classes and class methods being documented, it’s now the module and any functions found within. Module docstrings are placed at the top of the file even before any imports. Module docstrings should include the following:</p>
+<ul class="simple">
+<li><p>A brief description of the module and its purpose</p></li>
+<li><p>A list of any classes, exceptions, functions and any other objects exported by the module.</p></li>
+</ul>
+</li>
+<li><p>Function docstrings: The docstring for a module function should include the same items as a class method:</p>
+<ul class="simple">
+<li><p>A brief description of what the function is and what it’s used for</p></li>
+<li><p>Any arguments (both required and optional) that are passed including keyword arguments</p></li>
+<li><p>Any returns of the function</p></li>
+<li><p>Label any arguments that are considered optional</p></li>
+<li><p>Any side effects that occur when executing the function</p></li>
+<li><p>Any exceptions that are raised</p></li>
+<li><p>Any restrictions on when the function can be called</p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="How%20to%20Document.html" class="btn btn-neutral float-left" title="How to Document?" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Documentation%20with%20Sphinx.html" class="btn btn-neutral float-right" title="Documentation with Sphinx" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, W. Nuijten.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

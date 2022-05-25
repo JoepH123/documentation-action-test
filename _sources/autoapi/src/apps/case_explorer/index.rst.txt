@@ -1,0 +1,38 @@
+:py:mod:`src.apps.case_explorer`
+================================
+
+.. py:module:: src.apps.case_explorer
+
+.. autoapi-nested-parse::
+
+   
+   ..
+       !! processed by numpydoc !!
+
+
+Module Contents
+---------------
+
+.. py:data:: layout
+   
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
