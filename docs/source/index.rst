@@ -6,7 +6,7 @@
 Welcome to KNVB Game Analyzer (KGA)'s documentation!
 ====================================================
 
-Testing automated documentation workflow
+Testing automated documentation workflow - new
 
 Introduction
 ----------------------
