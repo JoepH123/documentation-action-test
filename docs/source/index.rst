@@ -8,6 +8,8 @@ Welcome to KNVB Game Analyzer (KGA)'s documentation!
 
 Testing automated documentation workflow - new (2)
 
+How long does update take to be included in page?
+
 Introduction
 ----------------------
 Welcome to the documentation of the KNVB Game Analyzer (KGB) dashboard. The KGB dashboard provides the user with the
